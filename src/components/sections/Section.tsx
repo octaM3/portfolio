@@ -1,4 +1,5 @@
 import type { FunctionComponent } from "react";
+import "./sections.css";
 
 interface SectionProps {
     children: React.ReactNode;

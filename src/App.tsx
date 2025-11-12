@@ -1,9 +1,10 @@
 import { useRef } from 'react';
 import './App.css'
 import Navbar from './components/navbar/Navbar';
-import Section from './components/section/Section'
+import Section from './components/sections/Section'
 import "bootstrap/dist/css/bootstrap.min.css";
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import MainSection from './components/sections/mainSection/MainSection';
 
 function App() {
 
@@ -28,8 +29,7 @@ function App() {
       }} />
 
       <Section ref={homeRef}>
-        <h1 className='mt-5'>hola mundo</h1>
-        <div style={{ height: "1000px" }}></div>
+        <MainSection />
       </Section>
 
       <Section ref={aboutMeRef}>
