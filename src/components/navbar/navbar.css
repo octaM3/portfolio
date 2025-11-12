@@ -1,5 +1,25 @@
-.navbar-content{
-    padding: 10px 150px !important;
+/* Navbar styles */
+.navbar-content {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px 150px !important;
+    border-bottom: 1px solid var(--border-grey-color);
 
-    border-bottom: 1px solid var(--grey-color);
+    /* desenfoca el fondo */
+    backdrop-filter: blur(6px);
+    /* soporte para Safari */
+    -webkit-backdrop-filter: blur(6px);
+}
+
+/* navbar options styles */
+
+.navbar-option-btn {
+    background-color: unset;
+    border: none;
+    color: var(--grey-color);
+    transition: color 0.3s ease;
+}
+
+.navbar-option-btn:hover {
+    color: var(--text-color);
+    transition: color 0.3s ease;
 }

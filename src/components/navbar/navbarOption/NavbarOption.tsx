@@ -7,7 +7,7 @@ interface NavbarOptionProps {
  
 const NavbarOption: FunctionComponent<NavbarOptionProps> = ({ onClick, text }) => {
     return (
-        <button onClick={onClick} className="btn btn-link">
+        <button onClick={onClick} className="navbar-option-btn mx-2">
             {text}
         </button>
     );

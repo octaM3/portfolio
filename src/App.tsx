@@ -1,9 +1,9 @@
 import { useRef } from 'react';
 import './App.css'
-import ThemeToggleButton from './components/buttons/ThemeBtn/ThemeBtn'
 import Navbar from './components/navbar/Navbar';
 import Section from './components/section/Section'
 import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 function App() {
 

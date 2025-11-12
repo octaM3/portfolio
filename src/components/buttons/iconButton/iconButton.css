@@ -1,0 +1,18 @@
+.icon-button {
+    background-color: unset;
+    border: none;
+    border-radius: 10px;
+    padding: 7px 10px 2px 10px;
+    transition: background-color 0.3s ease;
+    color: var(--theme-icon-color);
+}
+
+.icon-button:hover {
+    background-color: var(--blue-hover);
+    color: white;
+}
+
+.icon-button i{
+  font-size: 18px;
+  transition: color 0.3s ease;
+}

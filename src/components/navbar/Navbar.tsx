@@ -1,7 +1,7 @@
 import type { FunctionComponent } from "react";
 import "./navbar.css"
-import NavbarOption from "./navbarOption/navbarOption";
-import ThemeToggleButton from "../buttons/ThemeBtn/ThemeBtn";
+import NavbarOption from "./navbarOption/NavbarOption";
+import ThemeToggleButton from "../buttons/ThemeBtn/ThemeToggleButton";
 
 interface NavbarProps {
     onScrollToSection:{
@@ -17,7 +17,7 @@ const Navbar: FunctionComponent<NavbarProps> = ({ onScrollToSection }) => {
     return (
         <div className='navbar-content navbar fixed-top'>
 
-                <NavbarOption text="Sobre Mi" onClick={onScrollToSection.home} />
+                <NavbarOption text="<Dev />" onClick={onScrollToSection.home} />
 
             <div>
                 <NavbarOption text="Sobre Mi" onClick={onScrollToSection.aboutMe} />
