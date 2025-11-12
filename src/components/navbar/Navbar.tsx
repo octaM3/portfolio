@@ -15,9 +15,9 @@ interface NavbarProps {
  
 const Navbar: FunctionComponent<NavbarProps> = ({ onScrollToSection }) => {
     return (
-        <div className='navbar-content navbar fixed-top'>
+        <div className='nav-content navbar fixed-top'>
 
-                <NavbarOption text="<Dev />" onClick={onScrollToSection.home} />
+                <NavbarOption text="<Dev />" onClick={onScrollToSection.home} mainBtn={true} />
 
             <div>
                 <NavbarOption text="Sobre Mi" onClick={onScrollToSection.aboutMe} />

@@ -28,7 +28,7 @@ function App() {
       }} />
 
       <Section ref={homeRef}>
-        <h1>hola mundo</h1>
+        <h1 className='mt-5'>hola mundo</h1>
         <div style={{ height: "1000px" }}></div>
       </Section>
 

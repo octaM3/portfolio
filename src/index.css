@@ -6,6 +6,7 @@
 
   --text-color: #000000;
 
+  --navbar-border-color: rgb(218, 218, 218);
   --border-grey-color: rgb(199, 199, 199);
   --grey-color: #838383;
   
@@ -23,6 +24,7 @@
 
   --text-color: white;
 
+  --navbar-border-color: unset;
   --border-grey-color: rgb(199, 199, 199);
   --grey-color: #C7C7C7;
 

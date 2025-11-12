@@ -1,8 +1,7 @@
 /* Navbar styles */
-.navbar-content {
-    background: rgba(255, 255, 255, 0.2);
+.nav-content {
     padding: 15px 150px !important;
-    border-bottom: 1px solid var(--border-grey-color);
+    border-bottom: 1px solid var(--navbar-border-color);
 
     /* desenfoca el fondo */
     backdrop-filter: blur(6px);
@@ -12,14 +11,28 @@
 
 /* navbar options styles */
 
-.navbar-option-btn {
+.nav-op-styles{
     background-color: unset;
     border: none;
-    color: var(--grey-color);
+
     transition: color 0.3s ease;
 }
 
-.navbar-option-btn:hover {
+.nav-main-option-btn{
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 20px;
+}
+.nav-main-option-btn:hover {
+    color: var(--blue-hover);
+    transition: color 0.3s ease;
+}
+
+.nav-option-btn {
+    color: var(--grey-color);
+    font-size: 14px;
+}
+.nav-option-btn:hover {
     color: var(--text-color);
     transition: color 0.3s ease;
 }
