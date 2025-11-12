@@ -1,0 +1,5 @@
+.navbar-content{
+    padding: 10px 150px !important;
+
+    border-bottom: 1px solid var(--grey-color);
+}

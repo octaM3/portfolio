@@ -4,18 +4,24 @@
   --bg-color-two: rgb(224, 224, 224);
 
   --text-color: #000000;
+
+  --grey-color: grey;
   
-  --accent: oklch(0.47 0.18 240);
+  --blue: oklch(0.47 0.18 240);
+  --blue-hover: oklch(0.4 0.25 240);
 }
 
 [data-theme="dark"] {
   /* Tema oscuro */
-  --bg-color-one: #121212;
-  --bg-color-two: #121212;
+  --bg-color-one: #090F14;
+  --bg-color-two: #090F14;
 
   --text-color: white;
+  
+  --grey-color: grey;
 
-  --accent: oklch(0.58 0.2 240);
+  --blue: oklch(0.58 0.2 240);
+  --blue-hover: oklch(0.65 0.25 240);
 }
 
 body {

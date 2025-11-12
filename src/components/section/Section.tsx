@@ -2,11 +2,12 @@ import type { FunctionComponent } from "react";
 
 interface SectionProps {
     children: React.ReactNode;
+    ref: React.Ref<HTMLElement>;
 }
  
-const Section: FunctionComponent<SectionProps> = ({ children }) => {
+const Section: FunctionComponent<SectionProps> = ({ children, ref }) => {
     return (
-        <section>
+        <section ref={ref}>
             {children}
         </section>
     );
