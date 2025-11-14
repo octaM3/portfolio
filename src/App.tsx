@@ -1,5 +1,4 @@
 import { useRef } from 'react';
-import './App.css'
 import Navbar from './components/navbar/Navbar';
 import Section from './components/sections/Section'
 import "bootstrap/dist/css/bootstrap.min.css";

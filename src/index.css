@@ -10,7 +10,7 @@
   --border-grey-color: rgb(199, 199, 199);
   --grey-color: #838383;
   
-  --blue: oklch(0.4 0.25 240);
+  --blue: #0060B3;
   --blue-hover: oklch(0.47 0.18 240);
 
   --theme-icon-color: black;
@@ -34,9 +34,8 @@
 
 body {
   font-family: 'Epilogue', 'Geist', 'Montserrat', sans-serif !important;
-  /* font-family: 'Epilogue', 'Geist', 'Montserrat', sans-serif; */
   background-color: var(--bg-color-one) !important;
   color: var(--text-color) !important;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;  
 }
 

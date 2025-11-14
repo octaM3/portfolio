@@ -8,7 +8,7 @@ interface SectionProps {
  
 const Section: FunctionComponent<SectionProps> = ({ children, ref }) => {
     return (
-        <section ref={ref}>
+        <section className="container" ref={ref}>
             {children}
         </section>
     );
