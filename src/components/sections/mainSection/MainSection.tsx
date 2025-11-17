@@ -1,22 +1,37 @@
+import type { FunctionComponent } from "react"
+import Button from "../../buttons/button/Button"
 import IconButton from "../../buttons/iconButton/IconButton"
 import SimpleText from "../../text/simpleText/SimpleText"
 import Subtitle from "../../text/subtitle/Subtitle"
 import Title from "../../text/title/Title"
 
-const MainSection = () => {
+interface MainSectionProps {
+  onScrollToSection: {
+    projects: () => void;
+    contact: () => void;
+  }
+}
+
+const MainSection: FunctionComponent<MainSectionProps> = ({ onScrollToSection }) => {
+
   return (
-    <div className="d-flex flex-column align-items-center justify-content-center vh-100 text-center">
+    <div className="position-relative d-flex flex-column align-items-center justify-content-center vh-100 text-center">
       <SimpleText format="normal" text="HOLA, SOY" />
       <Title text="Octavio Curadelli" />
       <Subtitle text="Desarrollador Full Stack" format="center" type="blue" />
-      <div className="w-50">
+      <div className="w-50 mt-3">
         <SimpleText format="normal" text="Creando experiencias web modernas y funcionales con atención al detalle y las mejores prácticas." />
       </div>
-      <SimpleText format="mini" text="Godoy Cruz, Mendoza." />
-      <div>
-
+      <div className="d-flex align-items-center my-2">
+        <i className="bi bi-geo-alt-fill me-2"></i>
+        <SimpleText className="m-0" format="mini" text="Mendoza, Argentina." />
       </div>
-      <div>
+      
+      <div className="my-4">
+        <Button className="me-3" size="normal" type="blue" text="Ver Proyectos" onClick={onScrollToSection.projects} />
+        <Button className="ms-3" size="normal" type="plain" text="Contactar" onClick={onScrollToSection.contact} />
+      </div>
+      <div className="mt-2">
         <IconButton className="m-2" href="https://github.com/octaM3">
           <i className="bi bi-github"></i>
         </IconButton>
@@ -27,6 +42,11 @@ const MainSection = () => {
           <i className="bi bi-envelope"></i>
         </IconButton>
       </div>
+
+      <div className="bouncing-container position-absolute mb-5">
+        <i className="bi bi-arrow-down"></i>
+      </div>
+
     </div>
   )
 }

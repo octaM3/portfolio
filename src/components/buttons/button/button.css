@@ -1,0 +1,36 @@
+.generic-btn {
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.normal-size-g-btn{
+    padding: 10px 20px 8px 20px;
+    font-size: 14px;
+}
+
+.small-size-g-btn{
+    padding: 8px 20px 6px 20px;
+    font-size: 12px;
+}
+
+.generic-btn-blue {
+    background-color: var(--blue);
+    border: none;
+    color: white;
+}
+
+.generic-btn-blue:hover {
+    background-color: var(--blue-hover);
+}
+
+.generic-btn-plain {
+    border: 1px solid var(--border-grey-color);
+    background-color: transparent;
+    color: var(--text-color);
+}
+
+.generic-btn-plain:hover {
+    background-color: var(--blue);
+    color: white;
+}

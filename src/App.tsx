@@ -28,7 +28,10 @@ function App() {
       }} />
 
       <Section ref={homeRef}>
-        <MainSection />
+        <MainSection onScrollToSection={{
+          projects: () => scrollToSection(projectsRef),
+          contact: () => scrollToSection(contactRef),
+        }} />
       </Section>
 
       <Section ref={aboutMeRef}>

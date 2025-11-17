@@ -11,7 +11,7 @@
   --grey-color: #838383;
   
   --blue: #0060B3;
-  --blue-hover: oklch(0.47 0.18 240);
+  --blue-hover: #0079e4;
 
   --theme-icon-color: black;
 }
@@ -25,8 +25,8 @@
   --text-color: white;
 
   --navbar-border-color: unset;
-  --border-grey-color: rgb(199, 199, 199);
-  --grey-color: #C7C7C7;
+  --border-grey-color: rgb(75, 75, 75);
+  --grey-color: #9b9b9b;
 
   --blue: oklch(0.58 0.2 240);
   --blue-hover: oklch(0.65 0.25 240);

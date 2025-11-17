@@ -1,5 +1,27 @@
 /* Main section */
 
+@keyframes bouncing {
+  0% {
+    bottom: 10px;
+  }
+  50% {
+    bottom: 0px;
+  }
+  100% {
+    bottom: 10px;
+  }
+}
 
+.bouncing-container {
+  animation-duration: 1.3s;
+  animation-name: bouncing;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  font-size: 1.5em;
+}
+
+.bouncing-container i{
+    color: var(--grey-color);
+}
 
 /* About me section */
