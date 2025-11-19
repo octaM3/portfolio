@@ -6,11 +6,29 @@
     font-weight: 600;
 }
 
-.subtitle-line{
-
+.subtitle-txt{
+    color: var(--text-color);
+    font-size: 36px;
+    font-weight: 700;
 }
 
+.subtitle-txt-line{
+    background-color: var(--blue);
+    width: 80px;
+    height: 4px;
+    border-radius: 5px;
+}
+
+.subtitle-txt-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/*  */
 /* simple text */
+/*  */
 
 .simp-txt {
     color: var(--grey-color);

@@ -1,7 +1,7 @@
 :root {
   /* Tema claro */
-  --bg-color-one: white;
-  --bg-color-two: rgb(224, 224, 224);
+  --bg-color-one: #F5F9FC;
+  --bg-color-two: #F0F5F8;
   --theme-icon-color: black;
 
   --text-color: #000000;

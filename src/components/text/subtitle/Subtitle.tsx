@@ -10,14 +10,14 @@ interface SubtitleProps {
 
 const Subtitle: FunctionComponent<SubtitleProps> = ({ text, format, type, className }) => {
     return (
-        <>
+        <div className={`${format === "center" && "subtitle-txt-center"}`}>
             <h2 className={`
-                ${className ? className : ""} ${format === "center" ? "" : ""}  ${type === "normal" ? "subtitle-txt" : "subtitle-txt-blue"}`}
+                ${className ? className : ""} ${format === "center" ? "subtitle-txt-center" : "subtitle-txt-left"} ${type === "normal" ? "subtitle-txt" : "subtitle-txt-blue"}`}
             >
                 {text}
             </h2>
-            {type === "normal" && <div className="subtitle-line"></div>}
-        </>
+            {type === "normal" && <div className="subtitle-txt-line" ></div>}
+        </div>
     );
 }
 

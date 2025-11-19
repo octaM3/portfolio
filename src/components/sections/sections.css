@@ -1,12 +1,30 @@
+/* Section */
+
+.container-section{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.primary-bg-section {
+  background-color: var(--bg-color-one);
+}
+
+.secondary-bg-section {
+  background-color: var(--bg-color-two);
+}
+
 /* Main section */
 
 @keyframes bouncing {
   0% {
     bottom: 10px;
   }
+
   50% {
     bottom: 0px;
   }
+
   100% {
     bottom: 10px;
   }
@@ -20,8 +38,8 @@
   font-size: 1.5em;
 }
 
-.bouncing-container i{
-    color: var(--grey-color);
+.bouncing-container i {
+  color: var(--grey-color);
 }
 
 /* About me section */

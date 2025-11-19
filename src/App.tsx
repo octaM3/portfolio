@@ -4,6 +4,8 @@ import Section from './components/sections/Section'
 import "bootstrap/dist/css/bootstrap.min.css";
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import MainSection from './components/sections/mainSection/MainSection';
+import AboutMeSection from './components/sections/aboutMeSection/AboutMeSection';
+import SkillSection from './components/sections/skillSection/SkillSection';
 
 function App() {
 
@@ -27,29 +29,27 @@ function App() {
         contact: () => scrollToSection(contactRef),
       }} />
 
-      <Section ref={homeRef}>
+      <Section withPadding={false} className='primary-bg-section' ref={homeRef}>
         <MainSection onScrollToSection={{
           projects: () => scrollToSection(projectsRef),
           contact: () => scrollToSection(contactRef),
         }} />
       </Section>
 
-      <Section ref={aboutMeRef}>
-        <>sombre mi</>
-        <div style={{ height: "1000px" }}></div>
+      <Section withPadding={true} className='secondary-bg-section' ref={aboutMeRef}>
+        <AboutMeSection />
       </Section>
 
-      <Section ref={skillsRef}>
-        <>skills</>
-        <div style={{ height: "1000px" }}></div>
+      <Section withPadding={true} className='primary-bg-section' ref={skillsRef}>
+        <SkillSection />
       </Section>
 
-      <Section ref={projectsRef}>
+      <Section withPadding={true} className='secondary-bg-section' ref={projectsRef}>
         <>proyectos</>
         <div style={{ height: "1000px" }}></div>
       </Section>
 
-      <Section ref={contactRef}>
+      <Section withPadding={true} className='primary-bg-section' ref={contactRef}>
         <>contacto</>
         <div style={{ height: "1000px" }}></div>
       </Section>
