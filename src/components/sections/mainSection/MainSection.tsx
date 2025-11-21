@@ -16,15 +16,15 @@ const MainSection: FunctionComponent<MainSectionProps> = ({ onScrollToSection })
 
   return (
     <div className="position-relative d-flex flex-column align-items-center justify-content-center vh-100 text-center">
-      <SimpleText size="big" text="HOLA, SOY" />
+      <SimpleText color="gray" size="big" text="HOLA, SOY" />
       <Title text="Octavio Curadelli" />
       <Subtitle text="Desarrollador Full Stack" format="center" type="blue" />
       <div className="w-50 mt-3">
-        <SimpleText size="big" text="Creando experiencias web modernas y funcionales con atención al detalle y las mejores prácticas." />
+        <SimpleText color="gray" size="big" text="Creando experiencias web modernas y funcionales con atención al detalle y las mejores prácticas." />
       </div>
       <div className="d-flex align-items-center my-2">
         <i className="bi bi-geo-alt-fill me-2"></i>
-        <SimpleText className="m-0" size="mini" text="Mendoza, Argentina." />
+        <SimpleText color="gray" className="m-0" size="mini" text="Mendoza, Argentina." />
       </div>
       
       <div className="my-4">

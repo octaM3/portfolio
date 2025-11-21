@@ -30,12 +30,12 @@
 /* simple text */
 /*  */
 
-.simp-txt {
+.simp-txt-gray {
     color: var(--grey-color);
 }
 
-.simp-txt-mini {
-    color: var(--grey-color);
+.simp-txt{
+    color: var(--text-color)
 }
 
 /* Title */
