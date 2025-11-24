@@ -11,7 +11,7 @@ interface SkillCardProps {
 const SkillCard: FunctionComponent<SkillCardProps> = ({ name, skills }) => {
     return (
         <div className="skill-card">
-            <SimpleText color="none" fontWeight={700} size="big" text={name} className="mt-4" /> 
+            <SimpleText color="none" fontWeight={600} size="big" text={name} className="mt-4" /> 
 
             <div className="d-flex flex-wrap gap-2">
                 {skills.map((skill, i) => (

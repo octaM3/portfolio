@@ -1,11 +1,11 @@
 /* Skill label */
 
 .skill-label {
-    font-size: 0.875rem;
-    color: #555;
-    background-color: #f0f0f0;
-    border-radius: 0.25rem;
-    padding: 0.25rem 0.5rem;
+    font-size: 12px;
+    color: var(--text-color);
+    background-color: var(--skill-card-label-bg);
+    border-radius: 0.5rem;
+    padding: 5px 10px 2px 10px;
     margin: 0.125rem;
     display: inline-block;
 }

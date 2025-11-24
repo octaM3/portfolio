@@ -3,8 +3,8 @@
 .skill-card {
     /* flex: 1 1 250px; */
     width: 23%;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
+    background-color: var(--skill-card-bg);
+    border: 1px solid var(--border-grey-color);
     border-radius: 0.5rem;
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
