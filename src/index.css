@@ -15,8 +15,8 @@
 
   --theme-icon-color: black;
 
-  --skill-card-bg: #FFFFFF;
-  --skill-card-label-bg: #DFE6EB;
+  --card-bg: #FFFFFF;
+  --card-label-bg: #DFE6EB;
 }
 
 [data-theme="dark"] {
@@ -34,8 +34,8 @@
   --blue: oklch(0.58 0.2 240);
   --blue-hover: oklch(0.65 0.25 240);
 
-  --skill-card-bg: #0e161b;
-  --skill-card-label-bg: #192026;
+  --card-bg: #0e161b;
+  --card-label-bg: #192026;
 }
 
 body {

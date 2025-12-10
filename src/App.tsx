@@ -6,6 +6,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import MainSection from './components/sections/mainSection/MainSection';
 import AboutMeSection from './components/sections/aboutMeSection/AboutMeSection';
 import SkillSection from './components/sections/skillSection/SkillSection';
+import ProyectsSection from './components/sections/proyectsSection/ProyectsSection';
 
 function App() {
 
@@ -45,8 +46,7 @@ function App() {
       </Section>
 
       <Section withPadding={true} className='secondary-bg-section' ref={projectsRef}>
-        <>proyectos</>
-        <div style={{ height: "1000px" }}></div>
+        <ProyectsSection />
       </Section>
 
       <Section withPadding={true} className='primary-bg-section' ref={contactRef}>
