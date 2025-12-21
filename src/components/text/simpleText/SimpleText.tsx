@@ -22,13 +22,12 @@ const SimpleText: FunctionComponent<SimpleTextProps> = ({
         size === "normal" ? "16px" :
         "14px";
 
-        const colorClass = color ? "simp-txt" : "simp-txt-gray";
+        const colorClass = color === "none" ? "simp-txt" : "simp-txt-gray";
 
     return (
         <p
             style={{
-                fontSize,
-                color,           
+                fontSize,          
                 fontWeight       // se aplica solo si existe
             }}
             className={`${colorClass} ${className ?? ""}`}
