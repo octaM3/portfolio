@@ -10,7 +10,7 @@ interface SectionProps {
 
 const Section: FunctionComponent<SectionProps> = ({ children, ref, className, withPadding }) => {
     return (
-        <section style={ withPadding ? { paddingTop: "140px", paddingBottom: "140px" } : {}} className={`${className && className}`} ref={ref}>
+        <section className={`${className ?? ""} ${withPadding ? "section-padding" : ""}`} ref={ref}>
             <div className="container-section">
                 {children}
             </div>

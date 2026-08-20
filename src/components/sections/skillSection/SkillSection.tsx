@@ -13,10 +13,10 @@ const SkillSection: FunctionComponent<SkillSectionProps> = () => {
         <>
             <Subtitle text="Habilidades" format="center" type="normal" />
 
-            <div className="d-flex justify-content-center gap-3 flex-nowrap mt-5">
+            <div className="skills-grid mt-5">
                 {Array.from(skills.entries()).map(([category, skillList]) => (
-                    <CardContainer borderRadius={5}>
-                        <SkillCard name={category} skills={skillList} key={category} />
+                    <CardContainer borderRadius={5} key={category}>
+                        <SkillCard name={category} skills={skillList} />
                     </CardContainer>
 
                 ))}

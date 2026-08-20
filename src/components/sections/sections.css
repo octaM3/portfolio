@@ -14,7 +14,30 @@
   background-color: var(--bg-color-two);
 }
 
+.section-padding {
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
 /* Main section */
+
+.main-hero {
+  min-height: 100vh;
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+.main-hero-desc {
+  width: 100%;
+  max-width: 560px;
+}
 
 @keyframes bouncing {
   0% {
@@ -43,3 +66,125 @@
 }
 
 /* About me section */
+
+/* Education section */
+
+.education-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+@media (max-width: 768px) {
+  .education-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.education-heading {
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.cert-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cert-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-color);
+  background-color: var(--skill-card-label-bg);
+  border-radius: 8px;
+  padding: 6px 12px;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.cert-chip i {
+  font-size: 11px;
+}
+
+a.cert-chip:hover {
+  background-color: var(--blue);
+  color: white;
+}
+
+.cert-chip-static {
+  cursor: default;
+}
+
+/* Skill section */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+/* Contact section */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.2rem;
+}
+
+.contact-info-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--skill-card-label-bg);
+  color: var(--blue);
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border-grey-color);
+  background-color: var(--skill-card-bg);
+  color: var(--text-color);
+  font-family: inherit;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+}
+
+.contact-textarea {
+  resize: vertical;
+  min-height: 140px;
+}

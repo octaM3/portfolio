@@ -5,13 +5,18 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import MainSection from './components/sections/mainSection/MainSection';
 import AboutMeSection from './components/sections/aboutMeSection/AboutMeSection';
+import ExperienceSection from './components/sections/experienceSection/ExperienceSection';
+import EducationSection from './components/sections/educationSection/EducationSection';
 import SkillSection from './components/sections/skillSection/SkillSection';
 import ProyectsSection from './components/sections/proyectsSection/ProyectsSection';
+import ContactSection from './components/sections/contactSection/ContactSection';
 
 function App() {
 
   const homeRef = useRef<HTMLElement | null>(null);
   const aboutMeRef = useRef<HTMLElement | null>(null);
+  const experienceRef = useRef<HTMLElement | null>(null);
+  const educationRef = useRef<HTMLElement | null>(null);
   const skillsRef = useRef<HTMLElement | null>(null);
   const projectsRef = useRef<HTMLElement | null>(null);
   const contactRef = useRef<HTMLElement | null>(null);
@@ -25,8 +30,10 @@ function App() {
       <Navbar onScrollToSection={{
         home: () => scrollToSection(homeRef),
         aboutMe: () => scrollToSection(aboutMeRef),
-        skills: () => scrollToSection(skillsRef),
+        experience: () => scrollToSection(experienceRef),
         projects: () => scrollToSection(projectsRef),
+        education: () => scrollToSection(educationRef),
+        skills: () => scrollToSection(skillsRef),
         contact: () => scrollToSection(contactRef),
       }} />
 
@@ -41,17 +48,24 @@ function App() {
         <AboutMeSection />
       </Section>
 
-      <Section withPadding={true} className='primary-bg-section' ref={skillsRef}>
-        <SkillSection />
+      <Section withPadding={true} className='primary-bg-section' ref={experienceRef}>
+        <ExperienceSection />
       </Section>
 
       <Section withPadding={true} className='secondary-bg-section' ref={projectsRef}>
         <ProyectsSection />
       </Section>
 
+      <Section withPadding={true} className='primary-bg-section' ref={educationRef}>
+        <EducationSection />
+      </Section>
+
+      <Section withPadding={true} className='secondary-bg-section' ref={skillsRef}>
+        <SkillSection />
+      </Section>
+
       <Section withPadding={true} className='primary-bg-section' ref={contactRef}>
-        <>contacto</>
-        <div style={{ height: "1000px" }}></div>
+        <ContactSection />
       </Section>
     </>
   )

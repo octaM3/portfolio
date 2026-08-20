@@ -45,3 +45,23 @@
     font-size: 60px !important;
     font-weight: 800;
 }
+
+@media (max-width: 768px) {
+    .title-txt {
+        font-size: 44px !important;
+    }
+
+    .subtitle-txt {
+        font-size: 28px;
+    }
+
+    .subtitle-txt-blue {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-txt {
+        font-size: 34px !important;
+    }
+}

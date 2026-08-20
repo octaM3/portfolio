@@ -13,7 +13,7 @@ interface ProyectCardProps {
 const ProyectCard: FunctionComponent<ProyectCardProps> = ({ proyecto }) => {
     return (
         <div className="project-card">
-            <img className="project-card-img" src={proyecto.img} alt="" />
+            <img className="project-card-img" src={proyecto.img} alt={proyecto.title} />
             <div className="m-4">
                 <h5>{proyecto.title}</h5>
                 <SimpleText color="gray" size="mini" text={proyecto.description} />
@@ -22,13 +22,13 @@ const ProyectCard: FunctionComponent<ProyectCardProps> = ({ proyecto }) => {
                         <ProjectTecnologyLabel text={tech} key={index} />
                     ))}
                 </div>
-                <div>
-                    {proyecto.repoLink && proyecto.demoLink ? (
-                        <>
-                        <ProjectButton text="Ver Demo" href={proyecto.demoLink} />
-                        <ProjectButton text="Ver Repo" href={proyecto.repoLink} />
-                        </>
-                    ) : null}
+                <div className="d-flex flex-wrap gap-2 mt-3">
+                    {proyecto.demoLink && (
+                        <ProjectButton text="Ver Demo" href={proyecto.demoLink} icon="bi-box-arrow-up-right" />
+                    )}
+                    {proyecto.repoLink && (
+                        <ProjectButton text="Ver Repo" href={proyecto.repoLink} icon="bi-github" />
+                    )}
                 </div>
             </div>
         </div>

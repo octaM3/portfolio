@@ -1,5 +1,8 @@
 /* Navbar styles */
 .nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 15px 150px !important;
     border-bottom: 1px solid var(--navbar-border-color);
 
@@ -7,6 +10,58 @@
     backdrop-filter: blur(6px);
     /* soporte para Safari */
     -webkit-backdrop-filter: blur(6px);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+    .nav-content {
+        padding: 15px 60px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-content {
+        padding: 15px 20px !important;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        padding: 12px 20px 20px;
+        background-color: var(--bg-color-one);
+        border-bottom: 1px solid var(--navbar-border-color);
+    }
+
+    .nav-links-open {
+        display: flex;
+    }
+
+    .nav-option-btn {
+        margin: 6px 0 !important;
+    }
 }
 
 /* navbar options styles */
