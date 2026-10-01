@@ -4,6 +4,7 @@ import SimpleText from "../../text/simpleText/SimpleText";
 import "../cards.css";
 import ProjectTecnologyLabel from "../../Labels/projectTecnologyLabel/ProjectTecnologyLabel";
 import ProjectButton from "../../buttons/projectButton/ProjectButton";
+import CardImage from "../cardImage/CardImage";
 
 
 interface ProyectCardProps {
@@ -13,7 +14,7 @@ interface ProyectCardProps {
 const ProyectCard: FunctionComponent<ProyectCardProps> = ({ proyecto }) => {
     return (
         <div className="project-card">
-            <img className="project-card-img" src={proyecto.img} alt={proyecto.title} />
+            <CardImage className="project-card-img" src={proyecto.img} alt={proyecto.title} />
             <div className="m-4">
                 <h5>{proyecto.title}</h5>
                 <SimpleText color="gray" size="mini" text={proyecto.description} />

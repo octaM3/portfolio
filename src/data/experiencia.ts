@@ -2,6 +2,35 @@ import type { IExperiencia } from "../types/experiencia";
 
 const experiencia: IExperiencia[] = [
     {
+        img: "https://res.cloudinary.com/dshpkdkq6/image/upload/v1766352896/portfolio/Distanterra-img_f2vted.webp",
+        empresa: "Distanterra",
+        rol: "Desarrollador Full Stack (Freelance)",
+        periodo: "Ene. 2025 – Presente",
+        ubicacion: "Mendoza, Argentina",
+        modalidad: "Freelance",
+        descripcion: [],
+        etapas: [
+            {
+                periodo: "Ago. 2026 – Presente",
+                titulo: "Backend y gestión interna",
+                descripcion: [
+                    "Diseñé y desarrollé el backend completo de Distanterra —API REST en NestJS, TypeORM y PostgreSQL—, incorporando autenticación oculta, sesión por JWT y protección contra fuerza bruta y spam.",
+                    "Construí los módulos de gestión interna (campañas de logística minera, stock, vehículos, legajos de empleados, documentación financiera y tracking GPS) y el panel administrativo correspondiente."
+                ]
+            },
+            {
+                periodo: "Ene. 2025 – Jul. 2025",
+                titulo: "Sitio web corporativo",
+                descripcion: [
+                    "Desarrollé los 3 módulos frontend del sitio web corporativo de una empresa de logística minera con React y TypeScript."
+                ]
+            }
+        ],
+        technologies: ["NestJS", "TypeORM", "PostgreSQL", "API REST", "JWT", "React", "TypeScript", "VPS"],
+        repoLink: "",
+        demoLink: ""
+    },
+    {
         img: "/assets/experiencia/ivcisa.png",
         empresa: "IVCISA",
         rol: "Arquitecto de Soluciones",
@@ -22,24 +51,10 @@ const experiencia: IExperiencia[] = [
         ubicacion: "Mendoza, Argentina",
         modalidad: "Freelance",
         descripcion: [
-            "Diseñé y desarrollé en solitario, de cero a producción, una plataforma web de videojuegos con arquitectura full stack en NestJS, React y MariaDB, completando el desarrollo en aproximadamente un mes.",
+            "Diseñé y desarrollé de cero a producción una plataforma web de videojuegos con arquitectura full stack en NestJS, React y MariaDB, completando el desarrollo en aproximadamente un mes.",
             "Integré Mercado Pago como pasarela de pagos y desplegué la aplicación en un servidor VPS propio, escalando la plataforma a 500 usuarios registrados y un volumen de 30 transacciones mensuales."
         ],
         technologies: ["NestJS", "React", "MariaDB", "Mercado Pago", "TypeScript", "VPS", "Kiro", "Claude Code"],
-        repoLink: "",
-        demoLink: ""
-    },
-    {
-        img: "https://res.cloudinary.com/dshpkdkq6/image/upload/v1766352896/portfolio/Distanterra-img_f2vted.webp",
-        empresa: "Distanterra",
-        rol: "Desarrollador Full Stack (Freelance)",
-        periodo: "Ene. 2025 – Jul. 2025",
-        ubicacion: "Mendoza, Argentina",
-        modalidad: "Freelance",
-        descripcion: [
-            "Desarrollé en solitario los 3 módulos frontend del sitio web corporativo de una empresa de logística minera, con React y TypeScript, integrando Firebase como capa de datos."
-        ],
-        technologies: ["React", "TypeScript", "Firebase", "Cloudinary"],
         repoLink: "",
         demoLink: ""
     },

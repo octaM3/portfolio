@@ -11,7 +11,7 @@ const AboutMeSection: FunctionComponent<AboutMeSectionProps> = () => {
         <div>
             <Subtitle text="Sobre Mí" format="left" type="normal" />
 
-            <div className="mt-5">
+            <div className="mt-5 about-body" data-reveal="">
                 <SimpleText
                     color="gray"
                     text={"Soy Octavio Curadelli, Desarrollador Full Stack de Mendoza, Argentina, con más de 2 años de experiencia diseñando, desarrollando y desplegando en producción aplicaciones web, APIs y arquitecturas backend con Python, FastAPI, NestJS, React y Next.js."}

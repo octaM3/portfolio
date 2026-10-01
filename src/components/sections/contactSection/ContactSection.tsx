@@ -24,7 +24,7 @@ const ContactSection: FunctionComponent = () => {
             <Subtitle text="Contacto" format="center" type="normal" />
 
             <div className="contact-grid mt-5">
-                <div>
+                <div data-reveal="">
                     <SimpleText
                         color="gray"
                         size="big"
@@ -65,7 +65,7 @@ const ContactSection: FunctionComponent = () => {
                     </div>
                 </div>
 
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} data-reveal="" style={{ "--i": 1 } as React.CSSProperties}>
                     <div className="mb-3">
                         <input
                             className="contact-input"
@@ -98,7 +98,7 @@ const ContactSection: FunctionComponent = () => {
                             required
                         />
                     </div>
-                    <Button type="blue" size="normal" text="Enviar Mensaje" />
+                    <Button type="blue" size="normal" text="Enviar Mensaje" hasIcon={<i className="bi bi-send btn-arrow"></i>} iconEnd />
                 </form>
             </div>
         </div>

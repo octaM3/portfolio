@@ -1,13 +1,38 @@
 /* Card container */
 
 .card-container{
+    position: relative;
+    width: 100%;
     border: 1px solid var(--border-grey-color);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: border-color 0.3s;
+    transition:
+        border-color 0.3s,
+        box-shadow 0.5s var(--ease-out-expo),
+        translate 0.5s var(--ease-out-expo);
+    --spot-x: 50%;
+    --spot-y: 0%;
+}
+
+/* Spotlight que sigue al cursor */
+.card-container::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: radial-gradient(360px circle at var(--spot-x) var(--spot-y), var(--blue-soft), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s;
 }
 
 .card-container:hover{
     border-color: var(--blue);
+    box-shadow: var(--card-shadow-hover);
+    translate: 0 -4px;
+}
+
+.card-container:hover::after{
+    opacity: 1;
 }
 
 /*  */
@@ -38,10 +63,10 @@
     border-radius: 10px 10px 0px 0px;
     width: 100%;
     height: 270px;
-    transition: transform 0.3s ease;
+    transition: transform 0.8s var(--ease-out-expo);
 }
 
-.project-card-img:hover {
+.card-container:hover .project-card-img {
     transform: scale(1.05);
 }
 
@@ -62,10 +87,10 @@
     border-radius: 10px 10px 0px 0px;
     width: 100%;
     height: 220px;
-    transition: transform 0.3s ease;
+    transition: transform 0.8s var(--ease-out-expo);
 }
 
-.experience-card-img:hover {
+.card-container:hover .experience-card-img {
     transform: scale(1.05);
 }
 
@@ -75,7 +100,40 @@
     font-weight: 700;
 }
 
+.experience-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.experience-heading {
+    min-width: 0;
+}
+
+.experience-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--grey-color);
+}
+
+.experience-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.experience-meta i {
+    color: var(--blue);
+    font-size: 12px;
+}
+
 .experience-badge {
+    flex-shrink: 0;
+    margin-top: 2px;
     font-size: 11px;
     font-weight: 600;
     text-transform: uppercase;
@@ -102,6 +160,10 @@
     margin-bottom: 0.35rem;
 }
 
+.experience-list li::marker {
+    color: var(--blue);
+}
+
 
 
 
@@ -109,3 +171,134 @@
 
 /*  */
 /*  */
+
+/* Imagen de tarjeta: esqueleto mientras carga y placeholder si falta */
+
+.card-img-frame {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-img-hidden {
+    opacity: 0;
+}
+
+.card-img-frame img {
+    display: block;
+    transition: opacity 0.5s var(--ease-out-expo), transform 0.8s var(--ease-out-expo);
+}
+
+.card-img-skeleton {
+    background-color: var(--skill-card-label-bg);
+}
+
+.card-img-skeleton::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(100deg, transparent 20%, var(--blue-soft) 50%, transparent 80%);
+    transform: translateX(-100%);
+    animation: card-img-shimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes card-img-shimmer {
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.card-img-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 24px;
+    text-align: center;
+    color: var(--grey-color);
+    background-color: var(--skill-card-label-bg);
+    background-image: radial-gradient(circle at 50% 120%, var(--blue-soft), transparent 70%);
+}
+
+.card-img-placeholder i {
+    font-size: 32px;
+    color: var(--blue);
+    opacity: 0.7;
+}
+
+.card-img-placeholder span {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+
+/* Etapas dentro de una misma experiencia (cliente que volvió a contratar) */
+
+.experience-stages {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0.5rem 0;
+}
+
+.experience-stage {
+    position: relative;
+    padding-left: 22px;
+}
+
+/* Línea vertical que une las etapas */
+.experience-stage::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 10px;
+    bottom: -6px;
+    width: 1px;
+    background-color: var(--border-grey-color);
+}
+
+.experience-stage:last-child::before {
+    display: none;
+}
+
+/* Punto de cada etapa; la más reciente va rellena */
+.experience-stage::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 9px;
+    height: 9px;
+    border-radius: 999px;
+    border: 2px solid var(--blue);
+    background-color: var(--project-card-bg);
+}
+
+.experience-stage:first-child::after {
+    background-color: var(--blue);
+    box-shadow: 0 0 0 4px var(--blue-soft);
+}
+
+.experience-stage-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 2px 12px;
+}
+
+.experience-stage-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.experience-stage-period {
+    font-size: 12px;
+    color: var(--grey-color);
+    font-variant-numeric: tabular-nums;
+}
+
+.experience-stage .experience-list {
+    margin-top: 0.5rem;
+}

@@ -14,8 +14,8 @@ const SkillSection: FunctionComponent<SkillSectionProps> = () => {
             <Subtitle text="Habilidades" format="center" type="normal" />
 
             <div className="skills-grid mt-5">
-                {Array.from(skills.entries()).map(([category, skillList]) => (
-                    <CardContainer borderRadius={5} key={category}>
+                {Array.from(skills.entries()).map(([category, skillList], index) => (
+                    <CardContainer borderRadius={5} key={category} index={index % 4}>
                         <SkillCard name={category} skills={skillList} />
                     </CardContainer>
 

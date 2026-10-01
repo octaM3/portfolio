@@ -1,5 +1,60 @@
 /* Section */
 
+/* Brillo de fondo que sigue al cursor en cada sección */
+
+/* Registradas para poder animar el regreso del brillo a su lugar */
+@property --glow-x {
+  syntax: "<length-percentage>";
+  inherits: true;
+  initial-value: 50%;
+}
+
+@property --glow-y {
+  syntax: "<length-percentage>";
+  inherits: true;
+  initial-value: 40%;
+}
+
+.section-glow-host {
+  position: relative;
+  overflow: clip;
+  --glow-x: 50%;
+  --glow-y: 40%;
+}
+
+.section-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(520px circle at var(--glow-x) var(--glow-y), var(--blue-glow), transparent 65%);
+  opacity: 0;
+  transition: opacity 0.6s var(--ease-out-expo);
+}
+
+.section-glow-host:hover .section-glow {
+  opacity: 1;
+}
+
+.section-glow-host:not(:hover) {
+  transition: --glow-x 0.9s var(--ease-out-expo), --glow-y 0.9s var(--ease-out-expo);
+}
+
+.section-glow-host > .container-section {
+  position: relative;
+  z-index: 1;
+}
+
+/* En el hero el brillo está siempre presente (centrado hasta que se mueve el mouse) */
+.section-glow-host:has(.main-hero) .section-glow {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .section-glow-host:not(:has(.main-hero)) .section-glow {
+    display: none;
+  }
+}
+
 .container-section{
   max-width: 1200px;
   margin: 0 auto;
@@ -34,6 +89,33 @@
   padding-bottom: 80px;
 }
 
+/* Entrada escalonada del hero */
+
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+    filter: blur(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+.hero-step {
+  animation: hero-in 1s var(--ease-out-expo) both;
+}
+
+.hero-step-1 { animation-delay: 0.05s; }
+.hero-step-2 { animation-delay: 0.15s; }
+.hero-step-3 { animation-delay: 0.3s; }
+.hero-step-4 { animation-delay: 0.45s; }
+.hero-step-5 { animation-delay: 0.6s; }
+.hero-step-6 { animation-delay: 0.75s; }
+
 .main-hero-desc {
   width: 100%;
   max-width: 560px;
@@ -63,6 +145,12 @@
 
 .bouncing-container i {
   color: var(--grey-color);
+}
+
+/* About me */
+
+.about-body p {
+  max-width: 72ch;
 }
 
 /* About me section */
@@ -111,11 +199,21 @@
 
 .cert-chip i {
   font-size: 11px;
+  transition: transform 0.3s var(--ease-out-expo);
+}
+
+a.cert-chip {
+  transition: background-color 0.2s, color 0.2s, transform 0.3s var(--ease-out-expo);
 }
 
 a.cert-chip:hover {
   background-color: var(--blue);
   color: white;
+  transform: translateY(-2px);
+}
+
+a.cert-chip:hover i {
+  transform: translate(2px, -2px);
 }
 
 .cert-chip-static {
@@ -175,13 +273,27 @@ a.cert-chip:hover {
   color: var(--text-color);
   font-family: inherit;
   font-size: 14px;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .contact-input:focus,
 .contact-textarea:focus {
   outline: none;
   border-color: var(--blue);
+  box-shadow: 0 0 0 4px var(--blue-soft);
+}
+
+.contact-input::placeholder,
+.contact-textarea::placeholder {
+  color: var(--grey-color);
+}
+
+.contact-info-item {
+  transition: transform 0.3s var(--ease-out-expo);
+}
+
+.contact-info-item:hover {
+  transform: translateX(4px);
 }
 
 .contact-textarea {

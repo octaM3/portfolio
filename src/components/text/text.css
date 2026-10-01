@@ -17,6 +17,21 @@
     width: 80px;
     height: 4px;
     border-radius: 5px;
+    transform-origin: left center;
+}
+
+.subtitle-txt-center .subtitle-txt-line {
+    transform-origin: center;
+}
+
+/* La línea se dibuja después de que aparece el título */
+.reveal-ready .subtitle-block .subtitle-txt-line {
+    transform: scaleX(0);
+    transition: transform 0.9s var(--ease-out-expo) 0.25s;
+}
+
+.reveal-ready .subtitle-block.is-visible .subtitle-txt-line {
+    transform: scaleX(1);
 }
 
 .subtitle-txt-center{
@@ -41,6 +56,8 @@
 /* Title */
 
 .title-txt {
+    letter-spacing: -0.03em;
+    text-wrap: balance;
     color: var(--text-color);
     font-size: 60px !important;
     font-weight: 800;

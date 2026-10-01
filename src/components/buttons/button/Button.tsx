@@ -9,9 +9,10 @@ interface ButtonProps {
     hasIcon?: React.ReactNode;
     type: "blue" | "plain";
     size: "small" | "normal";
+    iconEnd?: boolean;
 }
 
-const Button: FunctionComponent<ButtonProps> = ({ text, className, hasIcon, href, onClick, type, size }) => {
+const Button: FunctionComponent<ButtonProps> = ({ text, className, hasIcon, href, onClick, type, size, iconEnd }) => {
 
     if (href) {
         return (
@@ -21,8 +22,9 @@ const Button: FunctionComponent<ButtonProps> = ({ text, className, hasIcon, href
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                {hasIcon ? hasIcon : null}
+                {!iconEnd && hasIcon}
                 {text}
+                {iconEnd && hasIcon}
             </a>
         );
     }
@@ -32,8 +34,9 @@ const Button: FunctionComponent<ButtonProps> = ({ text, className, hasIcon, href
             onClick={onClick} 
             className={`generic-btn ${size === "normal" ? "normal-size-g-btn" : "small-size-g-btn"} ${type === "blue" ? "generic-btn-blue" : "generic-btn-plain"} ${className ? className : ""}`}
         >
-            {hasIcon ? hasIcon : null}
+            {!iconEnd && hasIcon}
             {text}
+            {iconEnd && hasIcon}
         </button>
     );
 }

@@ -4,6 +4,7 @@ import "../cards.css";
 import ProjectTecnologyLabel from "../../Labels/projectTecnologyLabel/ProjectTecnologyLabel";
 import ProjectButton from "../../buttons/projectButton/ProjectButton";
 import SimpleText from "../../text/simpleText/SimpleText";
+import CardImage from "../cardImage/CardImage";
 
 interface ExperienceCardProps {
     experiencia: IExperiencia;
@@ -12,32 +13,53 @@ interface ExperienceCardProps {
 const ExperienceCard: FunctionComponent<ExperienceCardProps> = ({ experiencia }) => {
     return (
         <div className="experience-card">
-            <img className="experience-card-img" src={experiencia.img} alt={experiencia.empresa} />
+            <CardImage className="experience-card-img" src={experiencia.img} alt={experiencia.empresa} />
 
             <div className="m-4">
-                <div className="d-flex flex-wrap align-items-start justify-content-between gap-2">
-                    <div>
+                <div className="experience-header">
+                    <div className="experience-heading">
                         <h5 className="m-0">{experiencia.empresa}</h5>
                         <SimpleText color="gray" size="normal" className="m-0" text={experiencia.rol} />
                     </div>
-                    <div className="d-flex flex-column align-items-end">
-                        <span className={`experience-badge ${experiencia.modalidad === "Empleo" ? "experience-badge-job" : ""}`}>
-                            {experiencia.modalidad}
-                        </span>
-                        <SimpleText color="gray" size="mini" className="m-0 mt-1" text={experiencia.periodo} />
-                        {experiencia.ubicacion && (
-                            <SimpleText color="gray" size="mini" className="m-0" text={experiencia.ubicacion} />
-                        )}
-                    </div>
+                    <span className={`experience-badge ${experiencia.modalidad === "Empleo" ? "experience-badge-job" : ""}`}>
+                        {experiencia.modalidad}
+                    </span>
                 </div>
 
-                <ul className="experience-list">
-                    {experiencia.descripcion.map((item, i) => (
-                        <li key={i}>
-                            <SimpleText color="gray" size="normal" className="m-0" text={item} />
-                        </li>
-                    ))}
-                </ul>
+                <div className="experience-meta">
+                    <span><i className="bi bi-calendar3"></i>{experiencia.periodo}</span>
+                    {experiencia.ubicacion && (
+                        <span><i className="bi bi-geo-alt"></i>{experiencia.ubicacion}</span>
+                    )}
+                </div>
+
+{experiencia.etapas ? (
+                    <ol className="experience-stages">
+                        {experiencia.etapas.map((etapa, i) => (
+                            <li className="experience-stage" key={i}>
+                                <div className="experience-stage-head">
+                                    <span className="experience-stage-title">{etapa.titulo}</span>
+                                    <span className="experience-stage-period">{etapa.periodo}</span>
+                                </div>
+                                <ul className="experience-list">
+                                    {etapa.descripcion.map((item, k) => (
+                                        <li key={k}>
+                                            <SimpleText color="gray" size="normal" className="m-0" text={item} />
+                                        </li>
+                                    ))}
+                                </ul>
+                            </li>
+                        ))}
+                    </ol>
+                ) : (
+                                    <ul className="experience-list">
+                        {experiencia.descripcion.map((item, i) => (
+                            <li key={i}>
+                                <SimpleText color="gray" size="normal" className="m-0" text={item} />
+                            </li>
+                        ))}
+                    </ul>
+                )}
 
                 <div className="d-flex flex-wrap gap-1">
                     {experiencia.technologies.map((tech, i) => (

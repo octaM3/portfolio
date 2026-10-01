@@ -1,7 +1,7 @@
 import type { ICertificado } from "../types/certificado";
 
 const certificaciones: ICertificado[] = [
-    { title: "AWS Cloud Essentials for Business Leaders" },
+    { title: "AWS Cloud Essentials for Business Leaders", url: "" },
     { title: "AWS Cloud Practitioner Essentials" },
     { title: "AWS Technical Essentials" },
     { title: "Diplomatura en Programación Java — UTN.BA" },

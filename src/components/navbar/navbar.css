@@ -4,7 +4,8 @@
     align-items: center;
     justify-content: space-between;
     padding: 15px 150px !important;
-    border-bottom: 1px solid var(--navbar-border-color);
+    border-bottom: 1px solid transparent;
+    transition: background-color 0.4s, border-color 0.4s;
 
     /* desenfoca el fondo */
     backdrop-filter: blur(6px);
@@ -90,4 +91,65 @@
 .nav-option-btn:hover {
     color: var(--text-color);
     transition: color 0.3s ease;
+}
+
+/* Estado al hacer scroll */
+
+.nav-scrolled {
+    background-color: var(--nav-scrolled-bg);
+    border-bottom-color: var(--navbar-border-color);
+    backdrop-filter: blur(12px) saturate(1.4);
+    -webkit-backdrop-filter: blur(12px) saturate(1.4);
+}
+
+[data-theme="dark"] .nav-scrolled {
+    border-bottom-color: var(--border-grey-color);
+}
+
+/* Barra de progreso de lectura */
+
+.nav-progress {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 2px;
+    width: 100%;
+    background-color: var(--blue);
+    transform-origin: left center;
+    transform: scaleX(var(--progress, 0));
+}
+
+/* Sección activa */
+
+.nav-option-btn {
+    position: relative;
+}
+
+.nav-option-btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--blue);
+    transform: scaleX(0);
+    transition: transform 0.4s var(--ease-out-expo);
+}
+
+.nav-option-btn:hover::after,
+.nav-option-active::after {
+    transform: scaleX(1);
+}
+
+.nav-option-active {
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+    .nav-option-btn::after {
+        right: auto;
+        width: 24px;
+    }
 }

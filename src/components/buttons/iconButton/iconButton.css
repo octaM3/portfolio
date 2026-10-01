@@ -2,13 +2,15 @@
   background-color: unset;
   border: none;
   border-radius: 8px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s var(--ease-out-expo);
   color: var(--theme-icon-color);
+  display: inline-block;
 }
 
 .icon-format:hover {
   background-color: var(--blue-hover);
   color: white;
+  transform: translateY(-3px);
 }
 
 .icon-format i {

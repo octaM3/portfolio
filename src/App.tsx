@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useMemo, useRef } from 'react';
 import Navbar from './components/navbar/Navbar';
 import Section from './components/sections/Section'
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -10,6 +10,8 @@ import EducationSection from './components/sections/educationSection/EducationSe
 import SkillSection from './components/sections/skillSection/SkillSection';
 import ProyectsSection from './components/sections/proyectsSection/ProyectsSection';
 import ContactSection from './components/sections/contactSection/ContactSection';
+import { useReveal } from './hooks/useReveal';
+import { useActiveSection } from './hooks/useActiveSection';
 
 function App() {
 
@@ -21,13 +23,26 @@ function App() {
   const projectsRef = useRef<HTMLElement | null>(null);
   const contactRef = useRef<HTMLElement | null>(null);
 
+  const sections = useMemo(() => ({
+    home: homeRef,
+    aboutMe: aboutMeRef,
+    experience: experienceRef,
+    projects: projectsRef,
+    education: educationRef,
+    skills: skillsRef,
+    contact: contactRef,
+  }), []);
+
+  useReveal();
+  const activeSection = useActiveSection(sections);
+
   const scrollToSection = (ref: React.RefObject<HTMLElement | null> ) => {
     ref.current?.scrollIntoView({ behavior: 'smooth' });
   }
 
   return (
     <>
-      <Navbar onScrollToSection={{
+      <Navbar activeSection={activeSection} onScrollToSection={{
         home: () => scrollToSection(homeRef),
         aboutMe: () => scrollToSection(aboutMeRef),
         experience: () => scrollToSection(experienceRef),

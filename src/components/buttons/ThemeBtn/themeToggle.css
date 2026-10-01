@@ -1,0 +1,38 @@
+/* Botón de cambio de tema: los dos íconos se superponen y rotan al alternar */
+
+.theme-toggle {
+    position: relative;
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    display: inline-grid;
+    place-items: center;
+    padding: 0;
+    border-radius: 999px;
+    border: 1px solid var(--border-grey-color);
+    background-color: transparent;
+    color: var(--grey-color);
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.3s, border-color 0.3s, background-color 0.3s;
+}
+
+.theme-toggle:hover {
+    color: var(--blue);
+    border-color: var(--blue);
+    background-color: var(--blue-soft);
+}
+
+.theme-toggle-icon {
+    grid-area: 1 / 1;
+    font-size: 15px;
+    line-height: 1;
+    opacity: 0;
+    transform: rotate(-90deg) scale(0.5);
+    transition: opacity 0.35s var(--ease-out-expo), transform 0.5s var(--ease-out-expo);
+}
+
+.theme-toggle-icon-active {
+    opacity: 1;
+    transform: none;
+}

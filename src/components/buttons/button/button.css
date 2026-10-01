@@ -1,7 +1,23 @@
 .generic-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.2s, color 0.2s;
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.3s, transform 0.3s var(--ease-out-expo);
+}
+
+.generic-btn:active {
+    transform: scale(0.97);
+}
+
+.btn-arrow {
+    display: inline-block;
+    transition: transform 0.35s var(--ease-out-expo);
+}
+
+.generic-btn:hover .btn-arrow {
+    transform: translateX(4px);
 }
 
 .normal-size-g-btn{
@@ -22,6 +38,7 @@
 
 .generic-btn-blue:hover {
     background-color: var(--blue-hover);
+    box-shadow: 0 10px 24px -10px var(--blue);
 }
 
 .generic-btn-plain {

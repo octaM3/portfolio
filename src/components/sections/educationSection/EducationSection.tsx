@@ -9,7 +9,7 @@ const EducationSection: FunctionComponent = () => {
             <Subtitle text="Educación, Certificaciones e Idiomas" format="center" type="normal" />
 
             <div className="education-grid mt-5">
-                <div>
+                <div data-reveal="">
                     <h4 className="education-heading">Educación</h4>
                     <h6 className="mt-3 mb-1">Universidad Tecnológica Nacional</h6>
                     <SimpleText color="gray" size="normal" className="m-0" text="Tecnicatura Universitaria en Programación" />
@@ -20,7 +20,7 @@ const EducationSection: FunctionComponent = () => {
                     <SimpleText color="gray" size="normal" className="m-0 mt-1" text="Inglés — Básico" />
                 </div>
 
-                <div>
+                <div data-reveal="" style={{ "--i": 1 } as React.CSSProperties}>
                     <h4 className="education-heading">Certificaciones</h4>
                     <div className="cert-list mt-3">
                         {certificaciones.map((cert, index) => (
