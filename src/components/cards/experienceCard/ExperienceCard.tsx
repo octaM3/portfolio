@@ -25,6 +25,9 @@ const ExperienceCard: FunctionComponent<ExperienceCardProps> = ({ experiencia })
                             {experiencia.modalidad}
                         </span>
                         <SimpleText color="gray" size="mini" className="m-0 mt-1" text={experiencia.periodo} />
+                        {experiencia.ubicacion && (
+                            <SimpleText color="gray" size="mini" className="m-0" text={experiencia.ubicacion} />
+                        )}
                     </div>
                 </div>
 

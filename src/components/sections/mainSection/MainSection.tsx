@@ -20,7 +20,7 @@ const MainSection: FunctionComponent<MainSectionProps> = ({ onScrollToSection })
       <Title text="Octavio Curadelli" />
       <Subtitle text="Desarrollador Full Stack" format="center" type="blue" />
       <div className="main-hero-desc mt-3">
-        <SimpleText color="gray" size="big" text="Creando experiencias web modernas y funcionales con atención al detalle y las mejores prácticas." />
+        <SimpleText color="gray" size="big" text="Diseño, desarrollo y despliego en producción aplicaciones web, APIs y arquitecturas backend, de punta a punta." />
       </div>
       <div className="d-flex align-items-center my-2">
         <i className="bi bi-geo-alt-fill me-2"></i>

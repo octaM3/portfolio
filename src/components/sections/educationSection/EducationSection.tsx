@@ -6,14 +6,18 @@ import certificaciones from "../../../data/certificaciones";
 const EducationSection: FunctionComponent = () => {
     return (
         <div>
-            <Subtitle text="Educación y Certificaciones" format="center" type="normal" />
+            <Subtitle text="Educación, Certificaciones e Idiomas" format="center" type="normal" />
 
             <div className="education-grid mt-5">
                 <div>
                     <h4 className="education-heading">Educación</h4>
                     <h6 className="mt-3 mb-1">Universidad Tecnológica Nacional</h6>
                     <SimpleText color="gray" size="normal" className="m-0" text="Tecnicatura Universitaria en Programación" />
-                    <SimpleText color="gray" size="mini" className="m-0 mt-1" text="Ago. 2021 – Ago. 2023" />
+                    <SimpleText color="gray" size="mini" className="m-0 mt-1" text="2021 – 2023" />
+
+                    <h4 className="education-heading mt-5">Idiomas</h4>
+                    <SimpleText color="gray" size="normal" className="m-0 mt-3" text="Español — Nativo" />
+                    <SimpleText color="gray" size="normal" className="m-0 mt-1" text="Inglés — Básico" />
                 </div>
 
                 <div>

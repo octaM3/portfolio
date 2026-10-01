@@ -1,13 +1,12 @@
 import type { ICertificado } from "../types/certificado";
 
 const certificaciones: ICertificado[] = [
+    { title: "AWS Cloud Essentials for Business Leaders" },
     { title: "AWS Cloud Practitioner Essentials" },
     { title: "AWS Technical Essentials" },
-    { title: "AWS Cloud Essentials for Business Leaders" },
-    { title: "Diplomatura en Programación Java" },
-    { title: "Desarrollo Web con HTML5 y CSS3" },
-    { title: "PHP y MySQL" },
-    { title: "Fundamentos de la Programación" }
+    { title: "Diplomatura en Programación Java — UTN.BA" },
+    { title: "PHP y MySQL — UTN.BA" },
+    { title: "HTML5 y CSS3 — UTN.BA" }
 ];
 
 export default certificaciones;

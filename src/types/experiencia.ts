@@ -3,6 +3,7 @@ export interface IExperiencia {
     empresa: string;
     rol: string;
     periodo: string;
+    ubicacion?: string;
     modalidad: "Empleo" | "Freelance";
     descripcion: string[];
     technologies: string[];

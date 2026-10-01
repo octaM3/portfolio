@@ -1,8 +1,11 @@
 const skills: Map<string,string[]> = new Map<string,string[]>([
-    ["Frontend", [ "JavaScript", "TypeScript", "React", "Next.js", "Redux", "Bootstrap" ]],
-    ["Backend", [ "Node.js", "Express", "NestJS", "Python", "FastAPI", "Uvicorn", "Spring Boot", "RESTful APIs" ]],
-    ["Datos y Cloud", [ "PostgreSQL", "MySQL", "MariaDB", "MongoDB", "Prisma", "AWS", "Snowflake", "Databricks", "Firebase", "Cloudinary", "Mercado Pago" ]],
-    ["Herramientas", [ "Git", "GitHub", "GitLab", "Jira", "Slack", "VS Code", "Webpack", "Kiro", "Claude Code" ]]
+    ["Frontend", [ "React", "Next.js", "TypeScript", "JavaScript", "HTML5", "CSS3", "Bootstrap" ]],
+    ["Backend", [ "Python", "FastAPI", "NestJS", "Node.js", "Spring Boot" ]],
+    ["Bases de datos", [ "PostgreSQL", "MariaDB", "Firebase" ]],
+    ["Cloud & Data", [ "AWS", "Databricks", "Snowflake" ]],
+    ["Testing & CI/CD", [ "Jest", "Cypress", "Pruebas unitarias", "GitHub Actions", "GitLab CI" ]],
+    ["Herramientas", [ "Git", "GitHub", "GitLab", "Jira", "Postman", "Linux", "Vite" ]],
+    ["Integraciones", [ "Mercado Pago", "Stripe", "REST APIs", "JWT", "WebSockets" ]]
 ]);
 
 export default skills;

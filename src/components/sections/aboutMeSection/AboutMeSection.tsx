@@ -14,17 +14,17 @@ const AboutMeSection: FunctionComponent<AboutMeSectionProps> = () => {
             <div className="mt-5">
                 <SimpleText
                     color="gray"
-                    text={"Mi nombre es Octavio Curadelli, un apasionado por la programación y profundamente motivado para seguir aprendiendo y creciendo profesionalmente. Recientemente finalicé mis estudios como Técnico Programador en la Universidad Tecnológica Nacional, lo que me ha dado una sólida base técnica y el impulso para enfrentar nuevos desafíos."}
+                    text={"Soy Octavio Curadelli, Desarrollador Full Stack de Mendoza, Argentina, con más de 2 años de experiencia diseñando, desarrollando y desplegando en producción aplicaciones web, APIs y arquitecturas backend con Python, FastAPI, NestJS, React y Next.js."}
                     size="big"
                 />
                 <SimpleText
                     color="gray"
-                    text={"parrafo 2"}
+                    text={"Construí soluciones end-to-end para los sectores de logística, turismo, videojuegos y cloud, integrando pasarelas de pago (Mercado Pago, Stripe), bases de datos relacionales (PostgreSQL, MariaDB) y plataformas de datos (Databricks, Snowflake)."}
                     size="big"
                 />
                 <SimpleText
                     color="gray"
-                    text={"parrafo 3"}
+                    text={"Trabajo tanto en equipo como de forma autónoma, haciéndome cargo del ciclo completo del producto. Soy Técnico Universitario en Programación egresado de la Universidad Tecnológica Nacional."}
                     size="big"
                 />
             </div>
